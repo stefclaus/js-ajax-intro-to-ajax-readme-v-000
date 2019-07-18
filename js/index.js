@@ -1,16 +1,7 @@
-// your code here
-function getRepositories() {
-  const req = new XMLHttpRequest();
-  req.open('GET', 'https://api.github.com/users/stefclaus/repos');
-  req.send();
-}
-
-
-
 function getRepositories() {
   const req = new XMLHttpRequest();
   req.addEventListener('load', showRepositories);
-  req.open('GET', 'https://api.github.com/users/stefclaus/repos');
+  req.open('GET', 'https://api.github.com/users/octocat/repos');
   req.send();
 }
 
@@ -34,7 +25,7 @@ function getCommits(el) {
   const name = el.dataset.repo;
   const req = new XMLHttpRequest();
   req.addEventListener('load', showCommits);
-  req.open('GET', 'https://api.github.com/repos/stefclaus/' + name + '/commits');
+  req.open('GET', 'https://api.github.com/repos/octocat/' + name + '/commits');
   req.send();
 }
 
